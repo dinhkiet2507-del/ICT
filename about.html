@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -19,13 +18,14 @@
 <header class="navbar">
     <div class="nav-container">
 
+        <!-- LOGO - BẤM VÀO SẼ VỀ TRANG CHỦ -->
         <a href="index.html" class="logo">
             <span>HỒ SƠ HỌC TẬP</span>
         </a>
 
         <nav>
             <ul class="nav-menu">
-                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="about.html" class="active">Giới thiệu</a></li>
                 <li><a href="exercises.html">Bài tập</a></li>
                 <li><a href="contact.html">Liên hệ</a></li>
             </ul>
@@ -34,89 +34,377 @@
     </div>
 </header>
 
+
 <main>
 
 <section class="page-section">
 
     <div class="container">
 
+        <!-- TIÊU ĐỀ -->
         <div class="section-title">
-
-            </div>
-
-            <h2>
-                Giới thiệu
-            </h2>
+            <h1>Giới thiệu</h1>
 
             <p>
-                Một vài thông tin về bản thân,
-                thành tích và định hướng cá nhân.
+                Thông tin cá nhân, thành tích và định hướng tương lai
             </p>
-
         </div>
 
-        <div class="about-card">
 
-            <div>
-                <div class="avatar">
-                    👨‍🎓
+        <!-- =========================
+             KHUNG 3 THẺ
+        ========================== -->
+
+        <div class="about-slider">
+
+
+            <!-- NÚT <
+            Thẻ đầu tiên sẽ tự động ẩn nút này -->
+            <button
+                class="slider-btn slider-prev"
+                id="prevAbout"
+                type="button"
+                aria-label="Thẻ trước">
+
+                &lt;
+
+            </button>
+
+
+            <!-- =========================
+                 THẺ 1
+                 THÔNG TIN CÁ NHÂN
+            ========================== -->
+
+            <div class="about-slide active">
+
+                <div class="about-card">
+
+                    <!-- ẢNH / AVATAR -->
+
+                    <div>
+                        <div class="avatar">
+                            👨‍🎓
+                        </div>
+                    </div>
+
+
+                    <!-- NỘI DUNG -->
+
+                    <div class="about-content">
+
+                        <div class="slide-number">
+                            01 / 03
+                        </div>
+
+                        <h3>
+                            Thông tin cá nhân
+                        </h3>
+
+                        <p>
+                            Xin chào thầy và các bạn!
+                            Mình là Trần Đình Kiệt,
+                            hiện đang là sinh viên.
+
+                            Mình yêu thích việc học tập,
+                            khám phá công nghệ và thực hiện
+                            các dự án thực tế.
+
+                            Website này được tạo nhằm giới thiệu
+                            bản thân và tổng hợp các bài tập
+                            trong quá trình học tập.
+                        </p>
+
+
+                        <div class="personal-info">
+
+                            <div class="personal-item">
+                                <strong>Họ và tên</strong>
+                                <span>Trần Đình Kiệt</span>
+                            </div>
+
+                            <div class="personal-item">
+                                <strong>MSSV</strong>
+                                <span>22XXXXXX</span>
+                            </div>
+
+                            <div class="personal-item">
+                                <strong>Lớp</strong>
+                                <span>KXX KHTN</span>
+                            </div>
+
+                            <div class="personal-item">
+                                <strong>Ngành</strong>
+                                <span>Khoa học tự nhiên</span>
+                            </div>
+
+                            <div class="personal-item">
+                                <strong>Trường</strong>
+                                <span>Tên trường</span>
+                            </div>
+
+                            <div class="personal-item">
+                                <strong>Email</strong>
+                                <span>example@gmail.com</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
-            <div class="about-content">
 
-                <h3>
-                    Trần Đình Kiệt
-                </h3>
+            <!-- =========================
+                 THẺ 2
+                 THÀNH TÍCH
+            ========================== -->
 
-                <p>
-                    Xin chào thầy và các bạn! Mình là Nguyễn Văn A,
-                    hiện đang là sinh viên.
+            <div class="about-slide">
 
-                    Mình yêu thích việc học tập,
-                    khám phá công nghệ và thực hiện
-                    các dự án thực tế.
+                <div class="about-card">
 
-                    Website này được tạo nhằm giới thiệu
-                    bản thân và tổng hợp các bài tập
-                    trong quá trình học tập.
-                </p>
+                    <!-- ICON -->
 
-                <div class="personal-info">
-
-                    <div class="personal-item">
-                        <strong>MSSV</strong>
-                        <span>22XXXXXX</span>
+                    <div>
+                        <div class="achievement-icon">
+                            🏆
+                        </div>
                     </div>
 
-                    <div class="personal-item">
-                        <strong>Lớp</strong>
-                        <span>KXX KHTN</span>
-                    </div>
 
-                    <div class="personal-item">
-                        <strong>Ngành</strong>
-                        <span>Khoa học tự nhiên</span>
-                    </div>
+                    <!-- NỘI DUNG -->
 
-                    <div class="personal-item">
-                        <strong>Trường</strong>
-                        <span>Tên trường</span>
-                    </div>
+                    <div class="about-content">
 
-                    <div class="personal-item">
-                        <strong>Email</strong>
-                        <span>example@gmail.com</span>
-                    </div>
+                        <div class="slide-number">
+                            02 / 03
+                        </div>
 
-                    <div class="personal-item">
-                        <strong>Năm học</strong>
-                        <span>2026</span>
+                        <h3>
+                            Thành tích
+                        </h3>
+
+                        <p>
+                            Một số thành tích, hoạt động và
+                            kết quả nổi bật trong quá trình
+                            học tập.
+                        </p>
+
+
+                        <div class="achievement-list">
+
+
+                            <div class="achievement-item">
+
+                                <div class="achievement-year">
+                                    2026
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Thành tích 1
+                                    </h3>
+
+                                    <p>
+                                        Mô tả thành tích,
+                                        chứng chỉ hoặc kết quả
+                                        học tập của bạn.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="achievement-item">
+
+                                <div class="achievement-year">
+                                    2025
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Dự án / Cuộc thi
+                                    </h3>
+
+                                    <p>
+                                        Mô tả dự án, cuộc thi
+                                        hoặc hoạt động nổi bật
+                                        đã tham gia.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="achievement-item">
+
+                                <div class="achievement-year">
+                                    2025
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Chứng chỉ
+                                    </h3>
+
+                                    <p>
+                                        Thêm các chứng chỉ,
+                                        khóa học hoặc thành tích
+                                        khác tại đây.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
+
+
+            <!-- =========================
+                 THẺ 3
+                 ĐỊNH HƯỚNG TƯƠNG LAI
+            ========================== -->
+
+            <div class="about-slide">
+
+                <div class="about-card">
+
+                    <!-- ICON -->
+
+                    <div>
+                        <div class="future-icon">
+                            🚀
+                        </div>
+                    </div>
+
+
+                    <!-- NỘI DUNG -->
+
+                    <div class="about-content">
+
+                        <div class="slide-number">
+                            03 / 03
+                        </div>
+
+                        <h3>
+                            Định hướng tương lai
+                        </h3>
+
+                        <p>
+                            Những mục tiêu mà mình muốn
+                            hướng tới trong học tập và
+                            nghề nghiệp trong tương lai.
+                        </p>
+
+
+                        <div class="future-list">
+
+
+                            <div class="future-item">
+
+                                <span>
+                                    01
+                                </span>
+
+                                <div>
+
+                                    <h3>
+                                        Phát triển chuyên môn
+                                    </h3>
+
+                                    <p>
+                                        Tiếp tục học tập và nâng cao
+                                        kiến thức chuyên ngành.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="future-item">
+
+                                <span>
+                                    02
+                                </span>
+
+                                <div>
+
+                                    <h3>
+                                        Nâng cao kỹ năng
+                                    </h3>
+
+                                    <p>
+                                        Phát triển kỹ năng công nghệ,
+                                        tư duy sáng tạo và khả năng
+                                        giải quyết vấn đề.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="future-item">
+
+                                <span>
+                                    03
+                                </span>
+
+                                <div>
+
+                                    <h3>
+                                        Mục tiêu nghề nghiệp
+                                    </h3>
+
+                                    <p>
+                                        Hướng tới một công việc
+                                        phù hợp với sở thích,
+                                        năng lực và chuyên môn.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NÚT >
+            Thẻ cuối sẽ tự động ẩn nút này -->
+
+            <button
+                class="slider-btn slider-next"
+                id="nextAbout"
+                type="button"
+                aria-label="Thẻ tiếp theo">
+
+                &gt;
+
+            </button>
+
 
         </div>
 
@@ -126,12 +414,13 @@
 
 </main>
 
+
 <footer>
-    © 2026 Nguyễn Văn A. All Rights Reserved.
+    © 2026 Trần Đình Kiệt. All Rights Reserved.
 </footer>
+
 
 <script src="script.js"></script>
 
 </body>
 </html>
-```
