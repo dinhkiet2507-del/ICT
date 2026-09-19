@@ -299,6 +299,12 @@ window.addEventListener(
 
 /* =================================
    START
+================================= */
+
+resizeCanvas();
+animate();
+
+
 /* =========================================
    ABOUT SLIDER
 ========================================= */
@@ -315,102 +321,84 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentSlide = 0;
 
 
-    /* ==============================
-       HIỂN THỊ THẺ
-    ============================== */
-
     function showSlide(index) {
 
         if (slides.length === 0) {
             return;
         }
 
-        /* Ẩn tất cả thẻ */
         slides.forEach(function (slide) {
             slide.classList.remove("active");
         });
 
-        /* Hiện thẻ hiện tại */
         slides[index].classList.add("active");
 
 
-        /* ==============================
-           NÚT <
-        ============================== */
+        /* Nút trái */
 
         if (prevButton) {
 
-            if (index === 0) {
-                prevButton.style.display = "none";
-            } else {
-                prevButton.style.display = "flex";
-            }
-
+            prevButton.style.display =
+                index === 0
+                    ? "none"
+                    : "flex";
         }
 
 
-        /* ==============================
-           NÚT >
-        ============================== */
+        /* Nút phải */
 
         if (nextButton) {
 
-            if (index === slides.length - 1) {
-                nextButton.style.display = "none";
-            } else {
-                nextButton.style.display = "flex";
-            }
-
+            nextButton.style.display =
+                index === slides.length - 1
+                    ? "none"
+                    : "flex";
         }
-
     }
 
 
-    /* ==============================
-       NÚT <
-    ============================== */
+    /* Nút trái */
 
     if (prevButton) {
 
-        prevButton.addEventListener("click", function () {
+        prevButton.addEventListener(
+            "click",
+            function () {
 
-            if (currentSlide > 0) {
+                if (currentSlide > 0) {
 
-                currentSlide--;
+                    currentSlide--;
 
-                showSlide(currentSlide);
-
+                    showSlide(currentSlide);
+                }
             }
-
-        });
-
+        );
     }
 
 
-    /* ==============================
-       NÚT >
-    ============================== */
+    /* Nút phải */
 
     if (nextButton) {
 
-        nextButton.addEventListener("click", function () {
+        nextButton.addEventListener(
+            "click",
+            function () {
 
-            if (currentSlide < slides.length - 1) {
+                if (
+                    currentSlide <
+                    slides.length - 1
+                ) {
 
-                currentSlide++;
+                    currentSlide++;
 
-                showSlide(currentSlide);
-
+                    showSlide(currentSlide);
+                }
             }
-
-        });
-
+        );
     }
 
 
-    /* ==============================
-       HIỆN THẺ ĐẦU TIÊN
-    ============================== */
+    /* Hiện thẻ đầu tiên */
 
     showSlide(0);
 
