@@ -933,6 +933,7 @@ footer {
 }
 /* =========================================
    ABOUT SLIDER
+   CHỈ HIỂN THỊ 1 THẺ MỖI LẦN
 ========================================= */
 
 .about-slider {
@@ -954,27 +955,33 @@ footer {
 
 
 /* =========================================
-   MỖI LẦN CHỈ HIỂN THỊ 1 THẺ
+   QUAN TRỌNG:
+   MẶC ĐỊNH ẨN TẤT CẢ THẺ
 ========================================= */
 
-.about-slide {
-    display: none;
+.about-slider .about-slide {
+    display: none !important;
 
     width: 100%;
     max-width: 1000px;
 
     margin: 0 auto;
-
-    animation: slideFade 0.4s ease;
-}
-
-.about-slide.active {
-    display: block;
 }
 
 
 /* =========================================
-   SỐ THỨ TỰ THẺ
+   CHỈ THẺ CÓ "active" ĐƯỢC HIỂN THỊ
+========================================= */
+
+.about-slider .about-slide.active {
+    display: block !important;
+
+    animation: slideFade 0.4s ease;
+}
+
+
+/* =========================================
+   SỐ THỨ TỰ
 ========================================= */
 
 .slide-number {
@@ -992,14 +999,13 @@ footer {
 
 
 /* =========================================
-   NÚT ĐIỀU HƯỚNG
+   NÚT TRÁI / PHẢI
 ========================================= */
 
 .slider-btn {
     position: absolute;
 
     top: 50%;
-    transform: translateY(-50%);
 
     width: 50px;
     height: 50px;
@@ -1010,45 +1016,44 @@ footer {
 
     padding: 0;
 
+    transform: translateY(-50%);
+
     border-radius: 50%;
 
-    border: 1px solid rgba(103, 232, 249, 0.35);
+    border: 1px solid rgba(103, 232, 249, 0.4);
 
-    background: rgba(5, 8, 22, 0.75);
+    background: rgba(5, 8, 22, 0.85);
 
     color: #67e8f9;
 
     font-family: Arial, sans-serif;
-    font-size: 38px;
+
+    font-size: 36px;
     font-weight: 300;
 
     line-height: 1;
 
     cursor: pointer;
 
-    backdrop-filter: blur(10px);
+    z-index: 100;
 
     transition:
-        color 0.3s ease,
         background 0.3s ease,
         border-color 0.3s ease,
+        color 0.3s ease,
         box-shadow 0.3s ease,
         transform 0.3s ease;
 }
 
 
-/* =========================================
-   NÚT BÊN TRÁI
-========================================= */
+/* NÚT TRÁI */
 
 .slider-prev {
     left: 0;
 }
 
 
-/* =========================================
-   NÚT BÊN PHẢI
-========================================= */
+/* NÚT PHẢI */
 
 .slider-next {
     right: 0;
@@ -1056,10 +1061,11 @@ footer {
 
 
 /* =========================================
-   HIỆU ỨNG HOVER
+   HOVER
 ========================================= */
 
 .slider-btn:hover {
+
     color: #ffffff;
 
     background: rgba(0, 212, 255, 0.15);
@@ -1067,7 +1073,7 @@ footer {
     border-color: rgba(103, 232, 249, 0.8);
 
     box-shadow:
-        0 0 25px rgba(0, 212, 255, 0.25);
+        0 0 25px rgba(0, 212, 255, 0.3);
 
     transform:
         translateY(-50%)
@@ -1076,10 +1082,11 @@ footer {
 
 
 /* =========================================
-   HIỆU ỨNG CLICK
+   CLICK
 ========================================= */
 
 .slider-btn:active {
+
     transform:
         translateY(-50%)
         scale(0.95);
@@ -1087,11 +1094,12 @@ footer {
 
 
 /* =========================================
-   ICON THÀNH TÍCH
+   ICON THÀNH TÍCH / TƯƠNG LAI
 ========================================= */
 
 .achievement-icon,
 .future-icon {
+
     min-width: 160px;
     height: 160px;
 
@@ -1122,14 +1130,20 @@ footer {
 ========================================= */
 
 .achievement-list {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 14px;
 }
 
 .achievement-item {
+
     display: flex;
+
     align-items: flex-start;
+
     gap: 15px;
 
     padding: 15px;
@@ -1142,21 +1156,25 @@ footer {
 }
 
 .achievement-year {
+
     min-width: 55px;
 
     color: #67e8f9;
 
     font-size: 13px;
+
     font-weight: 700;
 }
 
 .achievement-item h3 {
+
     margin-bottom: 5px;
 
     font-size: 16px;
 }
 
 .achievement-item p {
+
     margin: 0;
 
     font-size: 13px;
@@ -1164,18 +1182,24 @@ footer {
 
 
 /* =========================================
-   ĐỊNH HƯỚNG TƯƠNG LAI
+   ĐỊNH HƯỚNG
 ========================================= */
 
 .future-list {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 14px;
 }
 
 .future-item {
+
     display: flex;
+
     align-items: flex-start;
+
     gap: 15px;
 
     padding: 15px;
@@ -1188,11 +1212,15 @@ footer {
 }
 
 .future-item > span {
+
     min-width: 35px;
+
     height: 35px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 9px;
@@ -1207,16 +1235,19 @@ footer {
     color: #ffffff;
 
     font-size: 12px;
+
     font-weight: 700;
 }
 
 .future-item h3 {
+
     margin-bottom: 5px;
 
     font-size: 16px;
 }
 
 .future-item p {
+
     margin: 0;
 
     font-size: 13px;
@@ -1224,12 +1255,13 @@ footer {
 
 
 /* =========================================
-   HIỆU ỨNG CHUYỂN THẺ
+   HIỆU ỨNG
 ========================================= */
 
 @keyframes slideFade {
 
     from {
+
         opacity: 0;
 
         transform:
@@ -1237,6 +1269,7 @@ footer {
     }
 
     to {
+
         opacity: 1;
 
         transform:
@@ -1246,16 +1279,18 @@ footer {
 
 
 /* =========================================
-   RESPONSIVE - TABLET
+   TABLET
 ========================================= */
 
 @media (max-width: 900px) {
 
     .about-slider {
+
         padding: 0 60px;
     }
 
     .slider-btn {
+
         width: 45px;
         height: 45px;
 
@@ -1265,20 +1300,18 @@ footer {
 
 
 /* =========================================
-   RESPONSIVE - MOBILE
+   MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
 
     .about-slider {
+
         padding: 0 48px;
     }
 
-    .about-slide {
-        width: 100%;
-    }
-
     .about-card {
+
         padding: 25px;
 
         gap: 25px;
@@ -1286,6 +1319,7 @@ footer {
 
     .achievement-icon,
     .future-icon {
+
         min-width: 100px;
 
         width: 100px;
@@ -1295,6 +1329,7 @@ footer {
     }
 
     .slider-btn {
+
         width: 38px;
         height: 38px;
 
@@ -1302,10 +1337,12 @@ footer {
     }
 
     .slider-prev {
+
         left: 0;
     }
 
     .slider-next {
+
         right: 0;
     }
 }
