@@ -937,86 +937,158 @@ footer {
 
 .about-slider {
     position: relative;
+
     width: 100%;
-    max-width: 1050px;
+    max-width: 1150px;
+
     margin: 0 auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 55px;
+
+    padding: 0 70px;
+
+    box-sizing: border-box;
 }
+
+
+/* =========================================
+   MỖI LẦN CHỈ HIỂN THỊ 1 THẺ
+========================================= */
 
 .about-slide {
     display: none;
+
     width: 100%;
-    animation: slideFade 0.45s ease;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    animation: slideFade 0.4s ease;
 }
 
 .about-slide.active {
     display: block;
 }
 
+
+/* =========================================
+   SỐ THỨ TỰ THẺ
+========================================= */
+
 .slide-number {
     display: inline-block;
+
     margin-bottom: 12px;
+
     color: #67e8f9;
+
     font-size: 13px;
     font-weight: 700;
+
     letter-spacing: 2px;
 }
 
-/* Nút < > */
+
+/* =========================================
+   NÚT ĐIỀU HƯỚNG
+========================================= */
 
 .slider-btn {
     position: absolute;
-    width: 48px;
-    height: 48px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 50px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    padding: 0;
+
     border-radius: 50%;
-    border: 1px solid rgba(0, 212, 255, 0.3);
 
-    background: rgba(255, 255, 255, 0.06);
-    color: #ffffff;
+    border: 1px solid rgba(103, 232, 249, 0.35);
 
-    font-size: 25px;
-    font-weight: 400;
+    background: rgba(5, 8, 22, 0.75);
+
+    color: #67e8f9;
+
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+
+    line-height: 1;
 
     cursor: pointer;
 
     backdrop-filter: blur(10px);
 
     transition:
-        transform 0.3s ease,
+        color 0.3s ease,
         background 0.3s ease,
-        box-shadow 0.3s ease;
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
-.slider-btn:hover {
-    transform: scale(1.1);
 
-    background: rgba(0, 212, 255, 0.15);
-
-    box-shadow:
-        0 0 25px rgba(0, 212, 255, 0.25);
-}
-
-.slider-btn:active {
-    transform: scale(0.95);
-}
+/* =========================================
+   NÚT BÊN TRÁI
+========================================= */
 
 .slider-prev {
     left: 0;
 }
 
+
+/* =========================================
+   NÚT BÊN PHẢI
+========================================= */
+
 .slider-next {
     right: 0;
 }
 
-/* Icon thành tích / định hướng */
+
+/* =========================================
+   HIỆU ỨNG HOVER
+========================================= */
+
+.slider-btn:hover {
+    color: #ffffff;
+
+    background: rgba(0, 212, 255, 0.15);
+
+    border-color: rgba(103, 232, 249, 0.8);
+
+    box-shadow:
+        0 0 25px rgba(0, 212, 255, 0.25);
+
+    transform:
+        translateY(-50%)
+        scale(1.1);
+}
+
+
+/* =========================================
+   HIỆU ỨNG CLICK
+========================================= */
+
+.slider-btn:active {
+    transform:
+        translateY(-50%)
+        scale(0.95);
+}
+
+
+/* =========================================
+   ICON THÀNH TÍCH
+========================================= */
 
 .achievement-icon,
 .future-icon {
@@ -1044,7 +1116,10 @@ footer {
         0 0 40px rgba(0, 212, 255, 0.08);
 }
 
-/* Thành tích */
+
+/* =========================================
+   THÀNH TÍCH
+========================================= */
 
 .achievement-list {
     display: flex;
@@ -1077,15 +1152,20 @@ footer {
 
 .achievement-item h3 {
     margin-bottom: 5px;
+
     font-size: 16px;
 }
 
 .achievement-item p {
     margin: 0;
+
     font-size: 13px;
 }
 
-/* Định hướng tương lai */
+
+/* =========================================
+   ĐỊNH HƯỚNG TƯƠNG LAI
+========================================= */
 
 .future-list {
     display: flex;
@@ -1132,53 +1212,93 @@ footer {
 
 .future-item h3 {
     margin-bottom: 5px;
+
     font-size: 16px;
 }
 
 .future-item p {
     margin: 0;
+
     font-size: 13px;
 }
 
-/* Hiệu ứng chuyển thẻ */
+
+/* =========================================
+   HIỆU ỨNG CHUYỂN THẺ
+========================================= */
 
 @keyframes slideFade {
+
     from {
         opacity: 0;
-        transform: translateX(25px);
+
+        transform:
+            translateX(20px);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+
+        transform:
+            translateX(0);
     }
 }
 
-/* Responsive */
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about-slider {
+        padding: 0 60px;
+    }
+
+    .slider-btn {
+        width: 45px;
+        height: 45px;
+
+        font-size: 34px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
 
 @media (max-width: 700px) {
 
     .about-slider {
-        padding: 0 45px;
+        padding: 0 48px;
+    }
+
+    .about-slide {
+        width: 100%;
     }
 
     .about-card {
         padding: 25px;
+
         gap: 25px;
     }
 
     .achievement-icon,
     .future-icon {
-        min-width: 110px;
-        width: 110px;
-        height: 110px;
-        font-size: 50px;
+        min-width: 100px;
+
+        width: 100px;
+        height: 100px;
+
+        font-size: 45px;
     }
 
     .slider-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
+        width: 38px;
+        height: 38px;
+
+        font-size: 30px;
     }
 
     .slider-prev {
