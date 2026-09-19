@@ -120,10 +120,18 @@ body {
 }
 
 .logo {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
     color: #ffffff;
-    font-size: 24px;
-    font-weight: 800;
     text-decoration: none;
+
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
 
     background: linear-gradient(
         90deg,
@@ -132,10 +140,61 @@ body {
         #ff4ecd
     );
 
+    background-size: 200% auto;
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    transition:
+        transform 0.3s ease,
+        background-position 0.5s ease;
 }
 
+.logo::before {
+    content: "DK";
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        #00d4ff,
+        #7b61ff
+    );
+
+    -webkit-text-fill-color: #ffffff;
+
+    box-shadow:
+        0 0 20px rgba(0, 212, 255, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+
+    background-position: 100% center;
+}
+
+.logo:hover::before {
+    transform: rotate(-5deg) scale(1.05);
+
+    box-shadow:
+        0 0 30px rgba(0, 212, 255, 0.45);
+}
 .nav-menu {
     list-style: none;
     display: flex;
