@@ -299,123 +299,119 @@ window.addEventListener(
 
 /* =================================
    START
-   /* =========================================
+/* =========================================
    ABOUT SLIDER
 ========================================= */
 
-const aboutSlides =
-    document.querySelectorAll(".about-slide");
+document.addEventListener("DOMContentLoaded", function () {
 
-const prevAbout =
-    document.getElementById("prevAbout");
+    const slides = document.querySelectorAll(
+        ".about-slider .about-slide"
+    );
 
-const nextAbout =
-    document.getElementById("nextAbout");
+    const prevButton = document.getElementById("prevAbout");
+    const nextButton = document.getElementById("nextAbout");
 
-let currentAboutSlide = 0;
-
-
-function showAboutSlide(index) {
-
-    /* Không làm gì nếu không có slider */
-
-    if (aboutSlides.length === 0) {
-        return;
-    }
+    let currentSlide = 0;
 
 
-    /* Ẩn tất cả các thẻ */
+    /* ==============================
+       HIỂN THỊ THẺ
+    ============================== */
 
-    aboutSlides.forEach((slide) => {
-        slide.classList.remove("active");
-    });
+    function showSlide(index) {
 
+        if (slides.length === 0) {
+            return;
+        }
 
-    /* Hiện thẻ hiện tại */
+        /* Ẩn tất cả thẻ */
+        slides.forEach(function (slide) {
+            slide.classList.remove("active");
+        });
 
-    aboutSlides[index].classList.add("active");
-
-
-    /* Ẩn nút < ở thẻ đầu tiên */
-
-    if (prevAbout) {
-
-        prevAbout.style.visibility =
-            index === 0
-                ? "hidden"
-                : "visible";
-    }
+        /* Hiện thẻ hiện tại */
+        slides[index].classList.add("active");
 
 
-    /* Ẩn nút > ở thẻ cuối cùng */
+        /* ==============================
+           NÚT <
+        ============================== */
 
-    if (nextAbout) {
+        if (prevButton) {
 
-        nextAbout.style.visibility =
-            index === aboutSlides.length - 1
-                ? "hidden"
-                : "visible";
-    }
-}
-
-
-/* =========================================
-   NÚT <
-========================================= */
-
-if (prevAbout) {
-
-    prevAbout.addEventListener(
-        "click",
-        function () {
-
-            if (currentAboutSlide > 0) {
-
-                currentAboutSlide--;
-
-                showAboutSlide(
-                    currentAboutSlide
-                );
+            if (index === 0) {
+                prevButton.style.display = "none";
+            } else {
+                prevButton.style.display = "flex";
             }
 
         }
-    );
-}
 
 
-/* =========================================
-   NÚT >
-========================================= */
+        /* ==============================
+           NÚT >
+        ============================== */
 
-if (nextAbout) {
+        if (nextButton) {
 
-    nextAbout.addEventListener(
-        "click",
-        function () {
-
-            if (
-                currentAboutSlide <
-                aboutSlides.length - 1
-            ) {
-
-                currentAboutSlide++;
-
-                showAboutSlide(
-                    currentAboutSlide
-                );
+            if (index === slides.length - 1) {
+                nextButton.style.display = "none";
+            } else {
+                nextButton.style.display = "flex";
             }
 
         }
-    );
-}
+
+    }
 
 
-/* =========================================
-   HIỂN THỊ THẺ ĐẦU TIÊN
-========================================= */
+    /* ==============================
+       NÚT <
+    ============================== */
 
-showAboutSlide(currentAboutSlide);
-================================= */
+    if (prevButton) {
 
-resizeCanvas();
-animate();
+        prevButton.addEventListener("click", function () {
+
+            if (currentSlide > 0) {
+
+                currentSlide--;
+
+                showSlide(currentSlide);
+
+            }
+
+        });
+
+    }
+
+
+    /* ==============================
+       NÚT >
+    ============================== */
+
+    if (nextButton) {
+
+        nextButton.addEventListener("click", function () {
+
+            if (currentSlide < slides.length - 1) {
+
+                currentSlide++;
+
+                showSlide(currentSlide);
+
+            }
+
+        });
+
+    }
+
+
+    /* ==============================
+       HIỆN THẺ ĐẦU TIÊN
+    ============================== */
+
+    showSlide(0);
+
+});
