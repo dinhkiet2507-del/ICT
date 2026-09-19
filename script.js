@@ -299,6 +299,122 @@ window.addEventListener(
 
 /* =================================
    START
+   /* =========================================
+   ABOUT SLIDER
+========================================= */
+
+const aboutSlides =
+    document.querySelectorAll(".about-slide");
+
+const prevAbout =
+    document.getElementById("prevAbout");
+
+const nextAbout =
+    document.getElementById("nextAbout");
+
+let currentAboutSlide = 0;
+
+
+function showAboutSlide(index) {
+
+    /* Không làm gì nếu không có slider */
+
+    if (aboutSlides.length === 0) {
+        return;
+    }
+
+
+    /* Ẩn tất cả các thẻ */
+
+    aboutSlides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+
+    /* Hiện thẻ hiện tại */
+
+    aboutSlides[index].classList.add("active");
+
+
+    /* Ẩn nút < ở thẻ đầu tiên */
+
+    if (prevAbout) {
+
+        prevAbout.style.visibility =
+            index === 0
+                ? "hidden"
+                : "visible";
+    }
+
+
+    /* Ẩn nút > ở thẻ cuối cùng */
+
+    if (nextAbout) {
+
+        nextAbout.style.visibility =
+            index === aboutSlides.length - 1
+                ? "hidden"
+                : "visible";
+    }
+}
+
+
+/* =========================================
+   NÚT <
+========================================= */
+
+if (prevAbout) {
+
+    prevAbout.addEventListener(
+        "click",
+        function () {
+
+            if (currentAboutSlide > 0) {
+
+                currentAboutSlide--;
+
+                showAboutSlide(
+                    currentAboutSlide
+                );
+            }
+
+        }
+    );
+}
+
+
+/* =========================================
+   NÚT >
+========================================= */
+
+if (nextAbout) {
+
+    nextAbout.addEventListener(
+        "click",
+        function () {
+
+            if (
+                currentAboutSlide <
+                aboutSlides.length - 1
+            ) {
+
+                currentAboutSlide++;
+
+                showAboutSlide(
+                    currentAboutSlide
+                );
+            }
+
+        }
+    );
+}
+
+
+/* =========================================
+   HIỂN THỊ THẺ ĐẦU TIÊN
+========================================= */
+
+showAboutSlide(currentAboutSlide);
 ================================= */
 
 resizeCanvas();
