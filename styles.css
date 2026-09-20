@@ -383,22 +383,29 @@ body {
 
 .btn {
     display: inline-block;
-
-    padding: 13px 25px;
-
+    padding: 12px 24px;
     border-radius: 10px;
-
     text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
 
+.btn:visited {
+    color: #ffffff;
+}
+
+.btn:hover {
+    color: #ffffff;
+}
+
+.btn:active {
+    color: #ffffff;
+}
+
+.btn:focus {
+    color: #ffffff;
+    outline: none;
+}
 .btn-primary {
     color: #ffffff;
 
