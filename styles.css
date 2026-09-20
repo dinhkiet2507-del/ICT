@@ -513,8 +513,9 @@ body {
    AVATAR
 ================================ */
 .avatar {
-    width: 180px;
-    height: 180px;
+    width: 210px;
+    height: 210px;
+    min-width: 210px;
     
     display: flex;
     align-items: center;
