@@ -1354,39 +1354,44 @@ footer {
     } 
 }
 /* =================================
-   EXERCISES - STYLE CHỮ GIỐNG HỌC LIỆU
+   EXERCISES - ĐỒNG BỘ CHỮ VỚI HỌC LIỆU
 ================================= */
 
-.section-title .small-title {
-    color: #b8c7dc;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-.section-title h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-.section-title > p {
-    color: #b8c7dc;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-
-/* Chữ trong card bài tập */
-
-.exercise-card h3 {
-    font-size: 23px;
+/* MY EXERCISES */
+.page-section .section-title .small-title {
+    color: #b8c7dc !important;
+    font-size: 17px !important;
+    line-height: 1.8 !important;
     margin-bottom: 10px;
-    color: #ffffff;
 }
 
-.exercise-card p {
-    color: #aebdd2;
-    line-height: 1.7;
-    font-size: 15px;
-    margin-bottom: 25px;
+/* Bài tập */
+.page-section .section-title h2 {
+    color: #ffffff !important;
+    font-size: 42px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Mô tả dưới tiêu đề */
+.page-section .section-title p {
+    color: #b8c7dc !important;
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+}
+
+/* =================================
+   CHỮ TRONG CARD
+================================= */
+
+.page-section .exercise-card h3 {
+    color: #ffffff !important;
+    font-size: 23px !important;
+    margin-bottom: 10px !important;
+}
+
+.page-section .exercise-card p {
+    color: #aebdd2 !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 25px !important;
 }
