@@ -381,30 +381,33 @@ body {
     gap: 15px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #ffffff;
-    transition: all 0.3s ease;
+.btn { 
+    display: inline-block; 
+    padding: 12px 24px; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    color: #ffffff; 
+    transition: all 0.3s ease; 
 }
 
-.btn:visited {
-    color: #ffffff;
-}
-
-.btn:hover {
-    color: #ffffff;
-}
-
-.btn:active {
+/* Giữ nguyên màu chữ sau khi đã click */
+.btn:visited,
+.btn-primary:visited,
+.btn-secondary:visited {
     color: #ffffff;
 }
 
-.btn:focus {
-    color: #ffffff;
-    outline: none;
+.btn:hover { 
+    color: #ffffff; 
+} 
+
+.btn:active { 
+    color: #ffffff; 
+} 
+
+.btn:focus { 
+    color: #ffffff; 
+    outline: none; 
 }
 .btn-primary {
     color: #ffffff;
