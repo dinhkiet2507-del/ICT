@@ -1353,3 +1353,40 @@ footer {
         right: 0; 
     } 
 }
+/* =================================
+   EXERCISES - STYLE CHỮ GIỐNG HỌC LIỆU
+================================= */
+
+.section-title .small-title {
+    color: #b8c7dc;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.section-title > p {
+    color: #b8c7dc;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* Chữ trong card bài tập */
+
+.exercise-card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.exercise-card p {
+    color: #aebdd2;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
